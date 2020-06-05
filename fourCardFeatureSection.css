@@ -1,0 +1,214 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100vh;
+
+	font-family: 'Poppins', arial;
+	font-size: 15px;
+}
+
+.attribution { 
+	font-size: 14px; 
+	text-align: center; 
+}
+
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+section {
+	background: hsl(0, 0%, 98%);
+	width: 100%;
+	min-height: 100vh;
+	padding: 20px;
+}
+
+.heading {
+	text-align: center;
+	margin-top: 30px;
+}
+
+h1 {
+	color: hsl(234, 12%, 34%);
+	font-size: 35px;
+	font-weight: 600;
+	margin: 0 0 15px 0;
+}
+
+h2 {
+	color: hsl(234, 12%, 34%);
+	font-size: 35px;
+	font-weight: 200;
+	margin: 0;
+}
+
+p {
+	margin: auto;
+	max-width: 500px;
+	color: hsl(229, 6%, 66%);
+}
+
+.main {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container {
+	padding: 50px 0;
+	display: grid;
+	grid-template-columns: repeat(3, 350px);
+	grid-template-rows: repeat(2, 1fr);
+	gap: 30px 30px;
+}
+
+.card {
+	background: #FFFFFF;
+	box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.1);
+	padding: 30px;
+	width: 350px;
+	height: 250px;
+
+	border-top-width: 4px;
+	border-top-style: solid;
+	border-radius: 8px;
+}
+
+/* Cyan */
+.one { 
+	grid-column: 1 / 2;
+  	grid-row: 1 / 3;
+  	align-self: center;
+
+	border-top-color: hsl(180, 62%, 55%);
+}
+
+/* Red */
+.two {
+	grid-column: 2 / 3;
+  	grid-row: 1 / 2;
+
+	border-top-color: hsl(0, 78%, 62%);
+}
+
+/* Orange */
+.three {
+	grid-column: 2 / 3;
+  	grid-row: 2 / 3;
+
+	border-top-color: hsl(34, 97%, 64%);
+}
+
+/* Blue */
+.four {
+	grid-column: 3 / 4;
+  	grid-row: 1 / 3;
+  	align-self: center;
+
+	border-top-color: hsl(212, 86%, 64%);
+}
+
+.title {
+	color: hsl(234, 12%, 34%);
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.content {
+	color: hsl(229, 6%, 66%);
+	margin: 10px 0 40px;
+}
+
+i {
+	background-size: 60px 60px;
+	width: 60px;
+	height: 60px;
+	display: block;
+	float: right;
+	padding: 20px;
+}
+
+.one i {
+	background-image: url("images/icon-supervisor.svg");	
+}
+
+.two i {
+	background-image: url("images/icon-team-builder.svg");	
+}
+
+.three i {
+	background-image: url("images/icon-karma.svg");	
+}
+
+.four i {
+	background-image: url("images/icon-calculator.svg");	
+}
+
+
+@media only screen and (min-width: 375px) and (max-width: 1110px) {
+	
+	.container {
+		grid-template-columns: repeat(2, 350px);
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.one {
+		grid-column: 1/2;
+		grid-row: 1/2;
+	}
+
+	.two {
+		grid-column: 2/3;
+		grid-row: 1/2;
+	}
+
+	.three {
+		grid-column: 1/2;
+		grid-row: 2/3;
+	}
+
+	.four {
+		grid-column: 2/3;
+		grid-row: 2/3;
+	}
+}
+
+@media only screen and (max-width: 730px) {
+	
+	h1, h2 {
+		font-size: 28px;
+	}
+
+	.container {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(4, 1fr);
+	}
+
+	.one {
+		grid-column: 1/-1;
+		grid-row: 1/2;
+	}
+
+	.two {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+	}
+
+	.three {
+		grid-column: 1/-1;
+		grid-row: 3/4;
+	}
+
+	.four {
+		grid-column: 1/-1;
+		grid-row: 4/5;
+	}
+}
